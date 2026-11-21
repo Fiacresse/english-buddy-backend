@@ -18,6 +18,14 @@ return [
         'key' => env('POSTMARK_API_KEY'),
     ],
 
+    'openai' => [
+        'key' => env('OPENAI_API_KEY'),
+        'model' => env('OPENAI_MODEL', 'gpt-4.1-mini'),
+        'realtime_model' => env('OPENAI_REALTIME_MODEL', 'gpt-realtime'),
+        'voice' => env('OPENAI_VOICE', 'marin'),
+        'daily_message_limit' => (int) env('AI_DAILY_MESSAGE_LIMIT', 150),
+    ],
+
     'resend' => [
         'key' => env('RESEND_API_KEY'),
     ],
